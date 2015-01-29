@@ -57,7 +57,7 @@ gcc $FILE -o $OUT_FILE
 return_val=`./$OUT_FILE`
 
 # check if output is "vulnerable", if you so you need to patch!!!!
-if [ $return_val = "vulnerable" ]; then
+if [ "$return_val" == "vulnerable" ]; then
   echo "your system is VULNERABLE!!!! Patch ASAP!"
   need_patch=1
 else
